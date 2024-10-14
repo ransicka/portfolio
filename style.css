@@ -6,6 +6,8 @@ body{
     text-decoration: none;
 }
 .navbar{
+    position: fixed;
+    width: 100%;
     background-color: rgb(232, 138, 24);
 }
 .navbar ul{
@@ -36,8 +38,9 @@ body{
     background-color: bisque;
 }
 .socials{
+    top: 100px;
     left: 20px;
-    position: absolute;
+    position: fixed;
     float: left;
     width: fit-content;
     border-radius: 50px;
@@ -67,13 +70,10 @@ body{
     text-decoration: none; 
 }
 .intro{
-    display: grid;
-    grid: 'left right';
-    align-items: center;
-    margin-right: 50px;
+    margin: 100px 0 50px 0;
+    display: flex;
 }
 .profile-pic{
-    grid-area: left;
     border: 5px solid white;
     margin: 20px 90px;
     height: 400px;
@@ -83,8 +83,39 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .intro-text{
-    grid-area: right;
+    padding: 50px;
 }
-#blogs{
+.intro-buttons{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+.blog-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.blog-tile{
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 5px;
+    text-align: center;
+}
+.blog-image{
+    padding: 10px;
+    border-radius: 30px;
+}
+.project-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.project-tile{
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 5px;
     text-align: center;
 }
