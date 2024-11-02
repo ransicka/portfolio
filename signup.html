@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Ransika</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="projects.html">Projects</a>
+            <a class="active" href="signup.html">Newsletter</a>
+        </nav>   
+    </header>
+    <section class="signup">
+        <div class="signup-form">
+            <h1>Sign up for my newsletter</h1>
+            <br>
+            <p>Get the latest updates on my projects, blogs, and more!</p>
+            <br>
+            <form action="#">
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="first-name">First name:</label><br>
+                        <input type="text" id="fname" name="fname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last name:</label><br>
+                        <input type="text" id="lname" name="lname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Contact number:</label><br>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of birth:</label><br>
+                        <input type="date" id="dob" name="dob">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label><br>
+                        <textarea id="address" name="address" rows="4" cols="50" placeholder="Number, Lane, City, Postal code, Country"></textarea>    
+                    </div>
+                </div>
+                <button type="submit">Sign up</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        &copy; Ransika Ranaweera
+    </footer>
+    
+</body>
+</html>
