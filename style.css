@@ -178,6 +178,19 @@ button:hover{
 .heading{
     text-align: center;
 }
+figure{
+    margin: 10px 0 10px 10px;
+    float: right;
+    padding: 5px;
+    width: 30%;
+    height: 30%;
+    border: 2px solid rgba(76, 0, 130, 0.5);
+    border-radius: 10px;
+}
+figcaption{
+    text-align: center;
+    font-size: 0.8rem;
+}
 .posts-menu{
     position: fixed;
     z-index: 100;
@@ -259,13 +272,11 @@ button:hover{
 }
 .signup{
     display: flex;
-    text-align: center;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 form{
-    text-align: center;
     margin: 1rem;
 }
 .form-container{
@@ -275,6 +286,7 @@ form{
     display: grid;
     grid-template-columns: auto auto;
     border: 2px solid indigo;
+    background-color: rgb(228, 194, 255);
     border-radius: 20px;
 }
 .form-group{
