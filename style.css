@@ -31,8 +31,15 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
     margin-bottom: 50px;
+}
+header i{
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+i:active{
+    transform: scale(0.9);
 }
 .logo{
     font-size: 3rem;
@@ -47,7 +54,23 @@ header{
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
+nav{
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.links-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 nav a{
+    height: 100%;
+    display: flex;
+    align-items: center;
     font-size: 1.4rem;
     color: rgb(216, 216, 216);
     margin-left: 4rem;
@@ -62,6 +85,50 @@ nav a{
 nav a:hover,
 nav a:active{
     color: indigo;
+}
+#sidebar-active{
+    display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+    display: none;
+}
+@media(max-width: 450px){
+    .links-container{
+      flex-direction: column;
+      align-items: flex-start;
+  
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 1000;
+      width: 300px;
+  
+      background-color: rgb(141, 95, 183);
+      box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+      transition: 0.75s ease-out;
+    }
+    nav a{
+      box-sizing: border-box;
+      height: auto;
+      width: 100%;
+      padding: 20px 30px;
+      justify-content: flex-start;
+    }
+    .open-sidebar-button, .close-sidebar-button{
+      padding: 20px;
+      display: block;
+    }
+    #sidebar-active:checked ~ .links-container{
+      right: 0;
+    }
+    #sidebar-active:checked ~ #overlay{
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9;
+    }
 }
 .hero-section{
     display: flex;
@@ -82,11 +149,13 @@ nav a:active{
     font-weight: 500;
     margin: 1rem 0;
 }
+.home-img{
+    height: 80%;
+}
 .home-img img{
     border: 5px solid white;
-    margin: 20px 90px;
+    margin: 20px;
     height: 400px;
-    width: 400px;
     border-radius: 50%;
     box-sizing: border-box;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -132,7 +201,12 @@ nav a:active{
 }
 .socials{
     margin-top: 2rem;
-    display: flex;    
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.social-icons{
+    display: flex;
 }
 .socials a{
     display: flex;
@@ -260,21 +334,49 @@ figcaption{
     padding: 30px;
     float: right;
 }
-.about{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.grid-container{
+    margin: 0 20px;
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+}
+.grid-item{
+    padding: 10px 20px;
 }
 .about-pfp{
-    height: 25%;
-    width: 25%;
+    grid-column: 1/span 1;
+    grid-row: 1/span 2;
+    align-content: center;
+    text-align: center;
+    height: 100%;
+}
+.education{
+    grid-column: 2;
+    grid-row: 1;
+}
+.skills{
+    grid-column: 3;
+    grid-row: 1;
+}
+.strengths{
+    grid-column: 2;
+    grid-row: 2;
+}
+.hobbies{
+    grid-column: 3;
+    grid-row: 2;
+}
+.about-pfp img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 .signup{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 form{
     margin: 1rem;
@@ -323,6 +425,105 @@ footer{
     background-color: black;
     color: white;
     text-align: center;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    section{
+        padding: 0 20px;
+    }
+    .posts-menu{
+        background-color: rgba(141, 95, 183, 0.363);
+        left: 10px;
+        top: 90px;
+        padding: 5px;
+    }
+    .posts-menu h2{
+        font-size: 1rem;
+    }
+    .hero-section{
+        flex-direction: column;
+        padding: 0;
+    }
+    .home-img img{
+        border: 5px solid white;
+        margin: 20px;
+        height: 300px;
+    }
+    .hero-section{
+        padding: 0;
+    }
+    .hero-txt{
+       padding: 20px 50px;
+    }
+    .hero-txt h1{
+        font-size: 2rem;
+    }
+    .hero-txt h2{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    .socials{
+        flex-direction: column;
+        align-items: center;
+    }
+    .socials a{
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    .social-icons{
+        justify-content: center;
+    }
+    button{
+        margin: 0 1rem 1rem 0;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+    .intro-para:first-child{
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+    .about-pfp{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .education{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .skills{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .strengths{
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .hobbies{
+        grid-column: 1;
+        grid-row: 5;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
 
 

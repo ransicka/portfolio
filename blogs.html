@@ -11,11 +11,21 @@
     <header>
         <a href="index.html" class="logo">Ransika</a>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Me</a>
-            <a class="active" href="blogs.html">Blogs</a>
-            <a href="projects.html">Projects</a>
-            <a href="signup.html">Newsletter</a>
+            <label for="sidebar-active" class="open-sidebar-button">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <label for="sidebar-active" id="overlay"></label>
+            <input type="checkbox" id="sidebar-active">
+            <div class="links-container">
+                <label for="sidebar-active" class="close-sidebar-button">
+                    <i class="fa-solid fa-times"></i>
+                </label>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="projects.html">Projects</a>
+                <a href="signup.html">Newsletter</a>
+            </div>
         </nav>   
     </header>
     <div class="heading">
@@ -33,7 +43,7 @@
             <div class="blog-post-container" id="blog-1">
                 <article class="post-content">
                     <h2>New Blood: The Rising Stars of Formula 1</h2>
-                    <img src="/Images/" alt="Blog 1 pic">
+                    <img src="/Images/Bearman-Antonelli-800x450.webp" alt="Blog 1 pic">
                     <p><strong>Formula 1, a sport steeped in history and tradition, is constantly evolving. As seasoned drivers
                          retire and new talent emerges, the grid is set to welcome a fresh wave of young and hungry racers. 
                          Let's dive into the exciting world of these up-and-coming stars who are poised to make their mark on the sport.</strong>
@@ -41,21 +51,38 @@
                     <aside>
                         <h3>Key Moments</h3>
                         <ul>
-                            <li>Verstappen takes Sprint Qualifying pole</li>
-                            <li>Verstappen wins Sprint</li>
-                            <li>Verstappen extends title lead</li>
+                            <li>The market for rookies for the 2025 season is huge</li>
+                            <li>Some prominent drivers will be leaving at the end of 2024 season</li>
+                            <li>Sudden departures of some drivers made way for new talents</li>
                         </ul>
                     </aside>
                     <h3>The Next Generation of F1 Drivers</h3>
                     <p>While the 2024 season is well underway, the focus has already shifted to the 2025 grid, which promises to be a thrilling spectacle. Several young drivers have caught the eye of F1 teams and are set to make their debut next year:</p>
                     <h3>Andrea Kimi Antonelli</h3>
+                    <figure>
+                        <img src="/Images/Kimi-Mexico.webp" alt="Andrea Kimi Antonelli">
+                        <figcaption>Andrea Kimi Antonelli</figcaption>
+                    </figure>
                     <p>This talented Italian driver, currently racing in Formula 3, has secured a coveted seat at Mercedes, replacing the legendary Lewis Hamilton.</p>
-                    <p>Jack Doohan: Son of the legendary motorcycle racer, Mick Doohan, Jack has impressed in Formula 2 and will be joining Alpine for the 2025 season.</p>
+                    <h3>Jack Doohan</h3>
+                    <p>Son of the legendary motorcycle racer, Mick Doohan, Jack has impressed in Formula 2 and will be joining Alpine for the 2025 season.</p>
                     <h3>Oliver Bearman</h3>
+                    <figure>
+                        <img src="/Images/bearman.avif" alt="Oliver Bearman">
+                        <figcaption>Oliver Bearman</figcaption>
+                    </figure>
                     <p>
                     Another rising star from Formula 2, Bearman will be making his F1 debut with Haas.
                     </p>
                     <h3>Liam Lawson</h3>
+                    <p>
+                        Liam Lawson is a promising young New Zealand racing driver currently competing in Formula 1
+                         for RB. After a successful career in junior formulas, including Toyota Racing Series and Formula 2,
+                          Lawson caught the eye of Red Bull and joined their junior program. He made his Formula 1 debut in 2023 with AlphaTauri
+                           and has since secured a full-time seat with RB for the 2024 season. Known for his aggressive driving style 
+                           and quick adaptation to new challenges, Lawson is seen as a rising star in the sport. 
+
+                    </p>
                 </article>
             </div>
             <div class="blog-post-container" id="blog-2">

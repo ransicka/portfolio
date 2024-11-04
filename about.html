@@ -11,28 +11,68 @@
     <header>
         <a href="index.html" class="logo">Ransika</a>
         <nav>
-            <a href="index.html">Home</a>
-            <a class="active" href="about.html">About Me</a>
-            <a href="blogs.html">Blogs</a>
-            <a href="projects.html">Projects</a>
-            <a href="signup.html">Newsletter</a>
+            <label for="sidebar-active" class="open-sidebar-button">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <label for="sidebar-active" id="overlay"></label>
+            <input type="checkbox" id="sidebar-active">
+            <div class="links-container">
+                <label for="sidebar-active" class="close-sidebar-button">
+                    <i class="fa-solid fa-times"></i>
+                </label>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="projects.html">Projects</a>
+                <a href="signup.html">Newsletter</a>
+            </div>
         </nav>   
     </header>
     <div class="heading">
         <h1>About Me</h1>   
     </div> 
-    <section class="about">
-        <div class="about-pfp">
+    <section class="grid-container about">
+        <div class="grid-item about-pfp">
             <img src="/Images/IMG-20240926-WA0021.jpg" alt="Profile picture" height="100%" width="100%">
         </div>
-        <div class="education">
+        <div class="grid-item education">
             <h2>Education</h2>
             <ul>
                 <li>2014-2022: Ananda College, Colombo</li>
                 <li>2023-present: Informatics Institute of Technology</li>
             </ul>
         </div>
-        
+        <div class="grid-item skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+        <div class="grid-item strengths">
+            <h2>Strengths</h2>
+            <ul>
+                <li>Adaptability</li>
+                <li>Problem-solving</li>
+                <li>Teamwork</li>
+                <li>Time management</li>
+                <li>Communication</li>
+            </ul>
+        </div>
+        <div class="grid-item hobbies">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Gaming</li>
+                <li>Photography</li>
+                <li>Blogging</li>
+                <li>Reading</li>
+                <li>Watching motorsports</li>
+            </ul>
+        </div>        
     </section>
     <footer>
         &copy; Ransika Ranaweera
